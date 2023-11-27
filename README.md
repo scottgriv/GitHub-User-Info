@@ -26,11 +26,9 @@
 A web application that allows you to search for a GitHub user by username in order to view their profile information and other details.
 - View a demo of the project on GitHub Pages **[Here](https://scottgriv.github.io/angular-github_user_info/)**.
 
-![Demo](docs/images/demo.png)
-
 <div align="center">
     <a href="" target="_blank">
-        <img src="./docs/images/demo.png" style="width: 50%;"/>
+        <img src="./docs/images/demo.png" style="width: 100%;"/>
     </a>
     <br>
     <i>Application Preview</i>
