@@ -27,7 +27,7 @@ A web application that allows you to search for a GitHub user by username in ord
 - View a demo of the project on GitHub Pages **[Here](https://scottgriv.github.io/angular-github_user_info/)**.
 
 <div align="center">
-    <a href="" target="_blank">
+    <a href="https://scottgriv.github.io/angular-github_user_info/" target="_blank">
         <img src="./docs/images/demo.png" style="width: 100%;"/>
     </a>
     <br>
