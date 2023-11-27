@@ -1,19 +1,55 @@
 
-# GitHub User Info
+<!-- Begin README -->
+
+<div align="center">
+    <a href="https://scottgriv.github.io/angular-github_user_info/" target="_blank">
+        <img src="./docs/images/icon.png" width="200" height="200"/>
+    </a>
+</div>
+<br>
+<p align="center">
+    <a href="https://angular.io/"><img src="https://img.shields.io/badge/Angular-15.0.3-DD0031?style=for-the-badge&logo=angular" alt="Angular Badge" /></a>
+    <a href="https://docs.github.com/en/rest?apiVersion=2022-11-28 "><img src="https://img.shields.io/badge/GitHub_API-v2022--11--28-000000?style=for-the-badge&logo=github" alt="GitHub API Badge" /></a>
+    <a href="https://sass-lang.com/"><img src="https://img.shields.io/badge/Sass-1.58.1-BF4080?style=for-the-badge&logo=sass" alt="Sass Badge" /></a>
+    <br>
+    <a href="https://github.com/scottgriv"><img src="https://img.shields.io/badge/github-follow_me-9031AC?style=for-the-badge&logo=github&color=9031AC" alt="GitHub Badge" /></a>
+    <a href="mailto:scott.grivner@gmail.com"><img src="https://img.shields.io/badge/gmail-contact_me-DC4233?style=for-the-badge&logo=gmail" alt="Email Badge" /></a>
+    <a href="https://www.buymeacoffee.com/scottgriv"><img src="https://img.shields.io/badge/buy_me_a_coffee-support_me-FEDE1F?style=for-the-badge&logo=buymeacoffee&color=FEDE1F" alt="BuyMeACoffee Badge" /></a>
+    <br>
+    <a href="https://prgoptimized.com" target="_blank"><img src="https://img.shields.io/badge/PRG-Silver Project-C0C0C0?style=for-the-badge&logo=data:image/svg%2bxml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDIwMDEwOTA0Ly9FTiIKICJodHRwOi8vd3d3LnczLm9yZy9UUi8yMDAxL1JFQy1TVkctMjAwMTA5MDQvRFREL3N2ZzEwLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiB3aWR0aD0iMjYuMDAwMDAwcHQiIGhlaWdodD0iMzQuMDAwMDAwcHQiIHZpZXdCb3g9IjAgMCAyNi4wMDAwMDAgMzQuMDAwMDAwIgogcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgbWVldCI+Cgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwMDAwMCwzNC4wMDAwMDApIHNjYWxlKDAuMTAwMDAwLC0wLjEwMDAwMCkiCmZpbGw9IiNDMEMwQzAiIHN0cm9rZT0ibm9uZSI+CjxwYXRoIGQ9Ik0xMiAzMjggYy04IC04IC0xMiAtNTEgLTEyIC0xMzUgMCAtMTA5IDIgLTEyNSAxOSAtMTQwIDQyIC0zOCA0OAotNDIgNTkgLTMxIDcgNyAxNyA2IDMxIC0xIDEzIC03IDIxIC04IDIxIC0yIDAgNiAyOCAxMSA2MyAxMyBsNjIgMyAwIDE1MCAwCjE1MCAtMTE1IDMgYy04MSAyIC0xMTkgLTEgLTEyOCAtMTB6IG0xMDIgLTc0IGMtNiAtMzMgLTUgLTM2IDE3IC0zMiAxOCAyIDIzCjggMjEgMjUgLTMgMjQgMTUgNDAgMzAgMjUgMTQgLTE0IC0xNyAtNTkgLTQ4IC02NiAtMjAgLTUgLTIzIC0xMSAtMTggLTMyIDYKLTIxIDMgLTI1IC0xMSAtMjIgLTE2IDIgLTE4IDEzIC0xOCA2NiAxIDc3IDAgNzIgMTggNzIgMTMgMCAxNSAtNyA5IC0zNnoKbTExNiAtMTY5IGMwIC0yMyAtMyAtMjUgLTQ5IC0yNSAtNDAgMCAtNTAgMyAtNTQgMjAgLTMgMTQgLTE0IDIwIC0zMiAyMCAtMTgKMCAtMjkgLTYgLTMyIC0yMCAtNyAtMjUgLTIzIC0yNiAtMjMgLTIgMCAyOSA4IDMyIDEwMiAzMiA4NyAwIDg4IDAgODggLTI1eiIvPgo8L2c+Cjwvc3ZnPgo=" alt="Silver" /></a>
+</p>
+
+---------------
+
+<h1 align="center">⚙️⚙️⚙️ GitHub User Info ⚙️⚙️⚙️</h1>
 
 A web application that allows you to search for a GitHub user by username in order to view their profile information and other details.
+- View a demo of the project on GitHub Pages **[Here](https://scottgriv.github.io/angular-github_user_info/)**.
 
 ![Demo](docs/images/demo.png)
 
-## Built With
+<div align="center">
+    <a href="" target="_blank">
+        <img src="./docs/images/demo.png" style="width: 50%;"/>
+    </a>
+    <br>
+    <i>Application Preview</i>
+</div>
 
-- GitHub API <br>
-- Angular <br>
-- SASS <br>
-- HTML <br>
-- TypeScript <br>
+---------------
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
+## Table of Contents
+
+- [Getting Started](#getting-started)
+    - [Development server](#development-server)
+    - [Code scaffolding](#code-scaffolding)
+    - [Build](#build)
+    - [Running unit tests](#running-unit-tests)
+    - [Running end-to-end tests](#running-end-to-end-tests)
+    - [Further help](#further-help)
+- [References](#references)
+- [License](#license)
+- [Credits](#credits)
 
 ## Getting Started
 
@@ -41,15 +77,35 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+## References
+
+- [Angular](https://angular.io/) - A TypeScript-based open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations.
+- [Angular CLI](https://github.com/angular/angular-cli) - A command-line interface tool that you use to initialize, develop, scaffold, and maintain Angular applications.
+- [GitHub API](https://docs.github.com/en/rest) - The REST API allows you to fetch data from and interact with GitHub.
+- [SASS](https://sass-lang.com/) - A preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets (CSS).
+- [TypeScript](https://www.typescriptlang.org/) - A programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language.
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) - The standard markup language for documents designed to be displayed in a web browser.
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - A style sheet language used for describing the presentation of a document written in a markup language such as HTML.
+
 ## License
 
-- This project is released under the terms of the **MIT License**, which permits use, modification, and distribution of the code, subject to the conditions outlined in the license.
+This project is released under the terms of the **MIT License**, which permits use, modification, and distribution of the code, subject to the conditions outlined in the license.
 - The [MIT License](https://choosealicense.com/licenses/mit/) provides certain freedoms while preserving rights of attribution to the original creators.
 - For more details, see the [LICENSE](LICENSE) file in this repository. in this repository.
 
 ## Credits
 
-**Author:** Scott Grivner <br>
-**Email:** scott.grivner@gmail.com <br>
-**Website:** [scottgrivner.dev](https://www.scottgriv.dev) <br>
+**Author:** [Scott Grivner](https://github.com/scottgriv) <br>
+**Email:** [scott.grivner@gmail.com](mailto:scott.grivner@gmail.com) <br>
+**Website:** [scottgrivner.dev](https://www.scottgrivner.dev) <br>
 **Reference:** [Main Branch](https://github.com/scottgriv/angular-github_user_info) <br>
+
+---------------
+
+<div align="center">
+    <a href="https://github.com/scottgriv" target="_blank">
+        <img src="./docs/images/footer.png" width="100" height="100"/>
+    </a>
+</div>
+
+<!-- End README -->
