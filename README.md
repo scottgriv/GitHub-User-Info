@@ -45,7 +45,7 @@ A web application that allows you to search for a GitHub user by username in ord
     - [Running unit tests](#running-unit-tests)
     - [Running end-to-end tests](#running-end-to-end-tests)
     - [Further help](#further-help)
-- [References](#references)
+- [Resources](#resources)
 - [License](#license)
 - [Credits](#credits)
 
@@ -75,7 +75,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-## References
+## Resources
 
 - [Angular](https://angular.io/) - A TypeScript-based open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations.
 - [Angular CLI](https://github.com/angular/angular-cli) - A command-line interface tool that you use to initialize, develop, scaffold, and maintain Angular applications.
