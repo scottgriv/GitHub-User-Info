@@ -15,7 +15,7 @@ This file is used to connect this repository to the **PRG** project categorizati
 **Repository Tier:** Silver <br>
 **Technology:** GitHub API, Angular, SASS, TypeScript, HTML <br>
 **Category:** Web Application, API <br>
-**Order:** 6 <br>
+**Order:** 7 <br>
 
 ## Parameters
 
