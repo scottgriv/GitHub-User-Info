@@ -13,7 +13,7 @@ This file is used to connect this repository to the **PRG** project categorizati
 ## Project Information
 
 **Repository Tier:** Silver <br>
-**Technology:** GitHub API, Angular, SASS, TypeScript, HTML <br>
+**Technology:** GitHub API, Angular, Sass, TypeScript, HTML <br>
 **Category:** Web Application, API <br>
 **Order:** 7 <br>
 
