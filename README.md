@@ -21,7 +21,7 @@
 
 ---------------
 
-<h1 align="center">⚙️⚙️⚙️ GitHub User Info ⚙️⚙️⚙️</h1>
+<h1 align="center">⚙️ GitHub User Info ⚙️</h1>
 
 A web application that allows you to search for a GitHub user by username in order to view their profile information and other details.
 - View a demo of the project on GitHub Pages **[Here](https://scottgriv.github.io/angular-github_user_info/)**.
