@@ -2,6 +2,29 @@ body
   background-color: black
   color: white
 
+.search-box
+  background-color: white
+  border: 2px solid #ccc
+  padding: 0.4rem
+  border-radius: 4px
+  width: 15%
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1)
+  margin-right: 0.5rem // Adds a right margin to create a gap between the input and the button
+  &:hover, &:focus
+    border-color: lighten(#ccc, 10%)
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2)
+
+.search-button
+  background-color: #F1590A
+  color: white
+  padding: 0.5rem 1rem
+  border: none
+  border-radius: 4px
+  cursor: pointer
+  transition: background-color 0.3s
+  &:hover
+    background-color: darken(#F1590A, 10%)
+
 input, button
   margin-top: 1rem
   margin-bottom: 1rem
@@ -16,10 +39,10 @@ input, button
 .field-title
   color: gray
   font-size: 0.8em
-  margin-right: 4px  // Adds a little space between the title and the value
+  margin-right: 4px
 
 .field-value
-  // You can add styles specific to the value here if needed
+  // Add styles for the value here if needed
 
 $link-color: lightblue
 $link-hover-color: darkblue
@@ -31,3 +54,13 @@ a
     color: $link-hover-color
   &:visited
     color: $link-visited-color
+
+footer
+  text-align: center
+  margin: 40px
+
+footer a
+  color: #E747D9
+  text-decoration: none
+  &:hover
+    text-decoration: underline

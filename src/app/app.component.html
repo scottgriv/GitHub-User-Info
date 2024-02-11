@@ -1,13 +1,13 @@
 <div style="text-align:center; background-color: black; color: white;">
   <div style="display: flex; justify-content: center; align-items: center;">
-    <img src="assets/github-mark-white.png" alt="GitHub Logo" style="width: 40px; margin-right: 10px;">
+    <img src="assets/icon.png" alt="Icon" style="width: 50px; margin-right: 10px;">
     <h1>GitHub User Info</h1>
-    <img src="assets/icon.png" alt="Icon" style="width: 40px; margin-left: 10px;">
+    <img src="assets/github-mark-white.png" alt="GitHub Logo" style="width: 40px; margin-left: 10px;">
   </div>
 
   <!-- Search Bar -->
-  <input [(ngModel)]="username" placeholder="Enter GitHub username">
-  <button (click)="searchUser()">Search</button>
+  <input [(ngModel)]="username" class="search-box" placeholder="Enter GitHub Username">
+  <button (click)="searchUser()" class="search-button">Search</button>
 
   <!-- Error Message -->
   <div *ngIf="errorMessage">
