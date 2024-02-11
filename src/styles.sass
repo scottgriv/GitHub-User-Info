@@ -2,13 +2,19 @@ body
   background-color: black
   color: white
 
+.description
+  width: 200vw // Use viewport width to make it responsive
+  max-width: 400px // Prevent it from going beyond 400px
+  margin: 0 auto // Automatically adjust margins to center the element
+  display: block // Ensure the element is treated as a block-level element
+
 .search-box
   background-color: white
   border: 2px solid #ccc
   padding: 0.4rem
   border-radius: 4px
   width: 80vw // Use viewport width to make it responsive
-  max-width: 200px // Prevent it from going beyond 300px
+  max-width: 200px // Prevent it from going beyond 200px
   box-shadow: 0 2px 5px rgba(0,0,0,0.1)
   margin-right: 0.5rem // Adds a right margin to create a gap between the input and the button
   &:hover, &:focus
