@@ -34,6 +34,14 @@ A web application, utilizing GitHub API, that allows you to search for GitHub us
     <i>Application Preview</i>
 </div>
 
+> [!IMPORTANT]
+> If you get a "Rate limit exceeded" error, it is because the application is not using a personal access token, therefore, API requests are limited.
+> See [GitHub Rate Limits for REST API](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2022-11-28) for more information.
+
+> [!TIP]
+> If you would like to use the application with a personal access token, which has higher rate limits, update the `usePersonalAccessToken` flag to `true` and add your own token to the `personalAccessToken` variable in the `src/environments/environment.prod.ts` file.
+> Build and serve the application for the changes to take place.
+
 ---------------
 
 ## Table of Contents
