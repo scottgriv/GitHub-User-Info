@@ -77,6 +77,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Resources
 
+- [GitHub Rate Limits for REST API](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2022-11-28) - GitHub Rate Limits for REST API explained.
 - [Angular](https://angular.io/) - A TypeScript-based open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations.
 - [Angular CLI](https://github.com/angular/angular-cli) - A command-line interface tool that you use to initialize, develop, scaffold, and maintain Angular applications.
 - [GitHub API](https://docs.github.com/en/rest) - The REST API allows you to fetch data from and interact with GitHub.
