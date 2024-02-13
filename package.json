@@ -1,6 +1,6 @@
 {
   "name": "angular-github-user-info",
-  "homepage": "https://scottgriv.github.io/angular-github_user_info/",
+  "homepage": "https://scottgriv.github.io/GitHub-User-Info/",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -9,7 +9,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist/angular-github_user_info"
+    "deploy": "gh-pages -d dist/GitHub-User-Info"
   },
   "private": true,
   "dependencies": {
