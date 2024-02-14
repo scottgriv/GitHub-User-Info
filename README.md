@@ -30,7 +30,7 @@ A web application that allows you to search for GitHub users or organizations in
 
 <div align="center">
     <a href="https://scottgriv.github.io/GitHub-User-Info" target="_blank">
-        <img src="./docs/images/demo.png" style="width: 100%;"/>
+        <img src="./docs/images/demo.png" style="width: 80%;"/>
     </a>
     <br>
     <i>Application Preview</i>
