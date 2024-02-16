@@ -24,7 +24,8 @@
 
 <h1 align="center">⚙️ GitHub User Info ⚙️</h1>
 
-A web application that allows you to search for GitHub users or organizations in order to view profile information and other details. 
+
+This dynamic web application leverages the GitHub API to provide a comprehensive and interactive search experience, enabling users to effortlessly find and explore profiles of both individual developers and organizations on GitHub. Featuring a sleek, user-friendly interface built with Angular, the application not only displays basic profile information but also offers insights into repositories, contributions, and activity timelines, allowing for in-depth understanding of a user's or organization's coding journey and open-source contributions.
 - Built with GitHub API and Angular.
 - View a demo of the project on GitHub Pages **[Here](https://scottgriv.github.io/GitHub-User-Info)**.
 
