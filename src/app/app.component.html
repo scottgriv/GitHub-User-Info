@@ -26,26 +26,67 @@
     <p><span class="field-title">Name:</span> <span class="field-value">{{ userInfo.name ?? 'N/A'}}</span></p>
     <p><span class="field-title">Bio:</span> <span class="field-value">{{ userInfo.bio ?? 'N/A'}}</span></p>
     <p><span class="field-title">Company:</span> <span class="field-value">{{ userInfo.company ?? 'N/A'}}</span></p>
-    <p><span class="field-title">Location:</span> <span class="field-value"><a href="https://www.google.com/maps/search/{{userInfo.location}}" target="_blank">{{ userInfo.location ?? 'N/A'}}</a></span></p>
-    <p><span class="field-title">Email:</span> <span class="field-value"><a href="mailto:{{userInfo.email}}" target="_blank">{{ userInfo.email ?? 'N/A'}}</a></span></p>
-    <p><span class="field-title">Website:</span> <span class="field-value"><a [href]="getCompleteUrl(userInfo.blog)" target="_blank">{{ userInfo.blog ?? 'N/A'}}</a></span></p>
+    <p><span class="field-title">Location:</span> <span class="field-value">
+      <ng-container *ngIf="userInfo.location; else naTemplate">
+        <a href="https://www.google.com/maps/search/{{userInfo.location}}" target="_blank">{{ userInfo.location }}</a>
+      </ng-container>
+      <ng-template #naTemplate>N/A</ng-template>
+    </span></p>
+    <p><span class="field-title">Email:</span> <span class="field-value">
+      <ng-container *ngIf="userInfo.email; else naTemplate">
+        <a href="mailto:{{userInfo.email}}" target="_blank">{{ userInfo.email }}</a>
+      </ng-container>
+    </span></p>
+    <p><span class="field-title">Email:</span> <span class="field-value">
+      <ng-container *ngIf="userInfo.email; else naTemplate">
+        <a href="mailto:{{userInfo.email}}" target="_blank">{{ userInfo.email }}</a>
+      </ng-container>
+      <ng-template #naTemplate>N/A</ng-template>
+    </span></p>    
+    <p><span class="field-title">Website:</span> <span class="field-value">
+      <ng-container *ngIf="userInfo.blog; else naTemplate">
+        <a [href]="getCompleteUrl(userInfo.blog)" target="_blank">{{ userInfo.blog }}</a>
+      </ng-container>
+    </span></p>
     <p><span class="field-title">Hireable:</span> <span class="field-value">{{ userInfo.hireable ? 'True' : 'False' }}</span></p>
-    <p><span class="field-title">Twitter:</span> <span class="field-value"><a href="https://twitter.com/{{userInfo.twitter_username}}" target="_blank">{{ userInfo.twitter_username ?? 'N/A'}}</a></span></p>
-    <p><span class="field-title">Public Repos:</span> <span class="field-value"><a href="https://github.com/{{userInfo.login}}?tab=repositories" target="_blank">{{ userInfo.public_repos ?? 'N/A'}}</a></span></p>
-    <p><span class="field-title">Public Gists:</span> <span class="field-value"><a href="https://gist.github.com/{{userInfo.login}}" target="_blank">{{ userInfo.public_gists ?? 'N/A'}}</a></span></p>
-    <p><span class="field-title">Followers:</span> <span class="field-value"><a href="https://github.com/{{userInfo.login}}?tab=followers" target="_blank">{{ userInfo.followers ?? 'N/A'}}</a></span></p>
-    <p><span class="field-title">Following:</span> <span class="field-value"><a href="https://github.com/{{userInfo.login}}?tab=following" target="_blank">{{ userInfo.following ?? 'N/A'}}</a></span></p>
+    <p><span class="field-title">X:</span> <span class="field-value">
+      <ng-container *ngIf="userInfo.twitter_username; else naTemplate">
+        <a href="https://x.com/{{userInfo.twitter_username}}" target="_blank">{{ userInfo.twitter_username }}</a>
+      </ng-container>
+    </span></p>
+    <p><span class="field-title">Public Repos:</span> <span class="field-value">
+      <ng-container *ngIf="userInfo.public_repos > 0; else zeroTemplate">
+        <a href="https://github.com/{{userInfo.login}}?tab=repositories" target="_blank">{{ userInfo.public_repos }}</a>
+      </ng-container>
+      <ng-template #zeroTemplate>0</ng-template>
+    </span></p>
+    <p><span class="field-title">Public Gists:</span> <span class="field-value">
+      <ng-container *ngIf="userInfo.public_gists > 0; else zeroTemplate">
+        <a href="https://gist.github.com/{{userInfo.login}}" target="_blank">{{ userInfo.public_gists }}</a>
+      </ng-container>
+    </span></p>
+    <p><span class="field-title">Followers:</span> <span class="field-value">
+      <ng-container *ngIf="userInfo.followers > 0; else zeroTemplate">
+        <a href="https://github.com/{{userInfo.login}}?tab=followers" target="_blank">{{ userInfo.followers }}</a>
+      </ng-container>
+    </span></p>
+    <p><span class="field-title">Following:</span> <span class="field-value">
+      <ng-container *ngIf="userInfo.following > 0; else zeroTemplate">
+        <a href="https://github.com/{{userInfo.login}}?tab=following" target="_blank">{{ userInfo.following }}</a>
+      </ng-container>
+    </span></p>
+ 
     <!-- Only display the total stars and commits if a personal access token is being used -->
     <p *ngIf="usePersonalAccessToken"><span class="field-title">Total Stars:</span> <span class="field-value">{{ totalStars }}</span></p>
     <p *ngIf="usePersonalAccessToken"><span class="field-title">Total Commits:</span> <span class="field-value">{{ totalCommits }}</span></p>
     <p><span class="field-title">Account Created At:</span> <span class="field-value">{{ userInfo.created_at ?? 'N/A'}}</span></p>
     <p><span class="field-title">Account Updated At:</span> <span class="field-value">{{ userInfo.updated_at ?? 'N/A'}}</span></p>
     
-   <!-- Rate Limit Info -->
-   <h3>API Rate Info:</h3>
-   <p><span class="field-title">Rate Limit:</span> <span class="field-value">{{ rateLimit }}</span></p>
-   <p><span class="field-title">Remaining Requests:</span> <span class="field-value">{{ rateRemaining }}</span></p>
-   <p><span class="field-title">Resets At:</span> <span class="field-value">{{ rateReset * 1000 | date:'medium' }}</span></p>
+    <!-- Rate Limit Info -->
+    <h3>API Rate Info:</h3>
+    <p><span class="field-title">Rate Limit:</span> <span class="field-value">{{ rateLimit }}</span></p>
+    <p><span class="field-title">Remaining Requests:</span> <span class="field-value">{{ rateRemaining }}</span></p>
+    <p><span class="field-title">Resets At:</span> <span class="field-value">{{ rateReset * 1000 | date:'medium' }}</span></p>
 
   </div>
 

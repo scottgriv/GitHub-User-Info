@@ -61,7 +61,7 @@ export class AppComponent {
 
   getCompleteUrl(url: string): string {
     if (!url.includes('http://') && !url.includes('https://')) {
-      return 'http://' + url; // or 'https://' depending on what you need
+      return 'https://' + url; // or 'http://' depending on what you need
     }
     return url;
   }
