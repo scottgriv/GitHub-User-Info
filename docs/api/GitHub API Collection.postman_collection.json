@@ -1,11 +1,10 @@
 {
 	"info": {
-		"_postman_id": "e1509fb2-5f05-439b-9789-3257eaf912c6",
+		"_postman_id": "6fe30c2f-38d3-4fc0-b210-7e622b6b6507",
 		"name": "GitHub API Collection",
-		"description": "> A simple collection based on [GitHub API V3](https://docs.github.com/en/rest/reference)\n\n## Features\n\n- Get Profile Information\n- Create repository on GitHub\n- Create Issues on any repository in GitHub\n- Delete your repository\n- Check health of GitHub API\n\n## Getting Started\n\nGenerate a [Personal Access Token](https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api#authentication) with the following grants:\n\n- Repo:all\n- Delete Repo\n\n![GitHub Token link](https://docs.github.com/assets/images/personal_token.png)\n\nThe Collection uses the following Collection Variables:\n\n- `username` : Fill in your GitHub Username\n- `url` : The base URL endpoint of GitHub v3 API\n- `repoName`: [OPTIONAL] the repo to delete, and create issues on. Is automatically set using Postman Tests.\n\nCollection By: [Hemanth Krishna](https://github.com/DarthBenro008)",
+		"description": "> A simple collection based on [GitHub API V3](https://docs.github.com/en/rest/reference) \n  \n\n## Features\n\n- Get Profile Information\n- Create repository on GitHub\n- Create Issues on any repository in GitHub\n- Delete your repository\n- Check health of GitHub API\n    \n\n## Getting Started\n\nGenerate a [Personal Access Token](https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api#authentication) with the following grants:\n\n- Repo:all\n- Delete Repo\n    \n\n<img src=\"https://docs.github.com/assets/images/personal_token.png\">\n\nThe Collection uses the following Collection Variables:\n\n- `username` : Fill in your GitHub Username\n- `url` : The base URL endpoint of GitHub v3 API\n- `repoName`: \\[OPTIONAL\\] the repo to delete, and create issues on. Is automatically set using Postman Tests.\n    \n\nCollection By: [Hemanth Krishna](https://github.com/DarthBenro008)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "24571367",
-		"_collection_link": "https://www.postman.com/indianpost/workspace/postman-api-101-workspace/collection/12292853-e1509fb2-5f05-439b-9789-3257eaf912c6?action=share&source=collection_link&creator=24571367"
+		"_exporter_id": "24571367"
 	},
 	"item": [
 		{
@@ -36,6 +35,154 @@
 					],
 					"path": [
 						"zen"
+					]
+				},
+				"description": "This API Endpoint checks the Health of GitHub API. It returns a random design philosophical quote"
+			},
+			"response": [
+				{
+					"name": "Check API Health (Get a random philosophical quote)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.github.com/zen",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"zen"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Server",
+							"value": "GitHub.com"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 18 Jul 2021 07:31:06 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubdomains; preload"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "deny"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "origin-when-cross-origin, strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'none'"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding, Accept, X-Requested-With"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "54"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1626594015"
+						},
+						{
+							"key": "X-RateLimit-Resource",
+							"value": "core"
+						},
+						{
+							"key": "X-RateLimit-Used",
+							"value": "6"
+						},
+						{
+							"key": "Accept-Ranges",
+							"value": "bytes"
+						},
+						{
+							"key": "Content-Length",
+							"value": "51"
+						},
+						{
+							"key": "X-GitHub-Request-Id",
+							"value": "5E32:306F:A531B:D1E52:60F3D8BA"
+						}
+					],
+					"cookie": [],
+					"body": "Responsive is better than fast."
+				}
+			]
+		},
+		{
+			"name": "Rate Limit Check",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"GitHub API Health\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.github.com/rate_limit",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"rate_limit"
 					]
 				},
 				"description": "This API Endpoint checks the Health of GitHub API. It returns a random design philosophical quote"
@@ -833,14 +980,115 @@
 				"description": "Deletes and repository from GitHub.\n\nThis needs admin permission granted token!"
 			},
 			"response": []
+		},
+		{
+			"name": "Get Repos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/user/repos?per_page=100",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"repos"
+					],
+					"query": [
+						{
+							"key": "per_page",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Org Repos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users/{{orgname}}/repos?per_page=100",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"{{orgname}}",
+						"repos"
+					],
+					"query": [
+						{
+							"key": "per_page",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Org Repos 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/orgs/{{orgname}}/repos?page={page}&per_page=100",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"orgs",
+						"{{orgname}}",
+						"repos"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "{page}"
+						},
+						{
+							"key": "per_page",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Orgs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/user/orgs",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"orgs"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"auth": {
-		"type": "bearer",
-		"bearer": [
+		"type": "apikey",
+		"apikey": [
 			{
-				"key": "token",
-				"value": "{{token}}",
+				"key": "value",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "Authorization",
 				"type": "string"
 			}
 		]
@@ -868,7 +1116,7 @@
 	"variable": [
 		{
 			"key": "username",
-			"value": "DarthBenro008"
+			"value": "scottgriv"
 		},
 		{
 			"key": "url",
@@ -877,6 +1125,11 @@
 		{
 			"key": "repoName",
 			"value": "Postman-API-101-Reposiory"
+		},
+		{
+			"key": "orgname",
+			"value": "Night-Owl-Labs\n",
+			"type": "string"
 		}
 	]
 }

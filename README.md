@@ -28,6 +28,7 @@
 This dynamic web application leverages the GitHub API to provide a comprehensive and interactive search experience, enabling users to effortlessly find and explore profiles of both individual developers and organizations on GitHub. Featuring a sleek, user-friendly interface built with Angular, the application not only displays basic profile information but also offers insights into repositories, contributions, and activity timelines, allowing for in-depth understanding of a user's or organization's coding journey and open-source contributions.
 - Built with GitHub API and Angular.
 - View a demo of the project on GitHub Pages **[Here](https://scottgriv.github.io/GitHub-User-Info)**.
+- A helpful Postman Collection is included in the `/docs/api` folder.
 
 <div align="center">
     <a href="https://scottgriv.github.io/GitHub-User-Info" target="_blank">
@@ -37,13 +38,23 @@ This dynamic web application leverages the GitHub API to provide a comprehensive
     <i>Application Preview</i>
 </div>
 
+> [!NOTE]
+> Total Commits and Total Stars is hidden without using a Personal Access Token due to the multiple API requests/loops required to obtain the data for demo purposes. Change `personalAccessToken` to `true` vs. the default `false` to see this information.
+
 > [!IMPORTANT]
-> If you get a "Rate limit exceeded" error, it is because the application is not using a personal access token, therefore, API requests are limited.
+> If you get a "Rate limit exceeded" error, it is because the application is not using a personal access token, therefore, API requests are limited .
 > See [GitHub Rate Limits for REST API](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2022-11-28) for more information.
+> The primary rate limit for unauthenticated requests is 60 requests per hour
 
 > [!TIP]
 > If you would like to use the application with a personal access token, which has higher rate limits, update the `usePersonalAccessToken` flag to `true` and add your own token to the `personalAccessToken` variable in the `src/environments/environment.prod.ts` file.
 > Build and serve the application for the changes to take place.
+
+> [!WARNING]
+> By default, the application hosted on GitHub Pages does not use a Personal Access Token, thus, it is subject to Rate Limits which is displayed in the output.
+
+> [!CAUTION]
+> Do not commit your repo when testing using a Personal Access token above; it should be used for local testing purposes only.
 
 ---------------
 
@@ -96,6 +107,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - [TypeScript](https://www.typescriptlang.org/) - A programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language.
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) - The standard markup language for documents designed to be displayed in a web browser.
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - A style sheet language used for describing the presentation of a document written in a markup language such as HTML.
+- [Postman](https://www.postman.com/) - Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster.
 
 ## License
 

@@ -35,10 +35,11 @@
     <p><span class="field-title">Public Gists:</span> <span class="field-value"><a href="https://gist.github.com/{{userInfo.login}}" target="_blank">{{ userInfo.public_gists ?? 'N/A'}}</a></span></p>
     <p><span class="field-title">Followers:</span> <span class="field-value"><a href="https://github.com/{{userInfo.login}}?tab=followers" target="_blank">{{ userInfo.followers ?? 'N/A'}}</a></span></p>
     <p><span class="field-title">Following:</span> <span class="field-value"><a href="https://github.com/{{userInfo.login}}?tab=following" target="_blank">{{ userInfo.following ?? 'N/A'}}</a></span></p>
-    <p><span class="field-title">Total Stars:</span> <span class="field-value">{{ totalStars }}</span></p>
-    <p><span class="field-title">Total Commits:</span> <span class="field-value">{{ totalCommits }}</span></p>
-    <p><span class="field-title">Created At:</span> <span class="field-value">{{ userInfo.created_at ?? 'N/A'}}</span></p>
-    <p><span class="field-title">Updated At:</span> <span class="field-value">{{ userInfo.updated_at ?? 'N/A'}}</span></p>
+    <!-- Only display the total stars and commits if a personal access token is being used -->
+    <p *ngIf="usePersonalAccessToken"><span class="field-title">Total Stars:</span> <span class="field-value">{{ totalStars }}</span></p>
+    <p *ngIf="usePersonalAccessToken"><span class="field-title">Total Commits:</span> <span class="field-value">{{ totalCommits }}</span></p>
+    <p><span class="field-title">Account Created At:</span> <span class="field-value">{{ userInfo.created_at ?? 'N/A'}}</span></p>
+    <p><span class="field-title">Account Updated At:</span> <span class="field-value">{{ userInfo.updated_at ?? 'N/A'}}</span></p>
     
    <!-- Rate Limit Info -->
    <h3>API Rate Info:</h3>

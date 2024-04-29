@@ -37,6 +37,8 @@ export class AppComponent {
       }
     );
 
+  // Only fetch stars and commits if a personal access token is being used
+  if (this.usePersonalAccessToken) {
     this.githubService.getTotalStars(this.username, this.usePersonalAccessToken).subscribe(
       stars => {
         this.totalStars = stars;
@@ -55,6 +57,7 @@ export class AppComponent {
       }
     );
   }
+  }
 
   getCompleteUrl(url: string): string {
     if (!url.includes('http://') && !url.includes('https://')) {
@@ -64,15 +67,20 @@ export class AppComponent {
   }
 
   handleError(error: HttpErrorResponse) {
+    this.userInfo = null;  // Clear out the userInfo
     if (error.status === 404) {
-      this.userInfo = null;  // Clear out the userInfo
       this.errorMessage = 'User profile not found.';
     } else if (error.status === 403) {
-      this.userInfo = null;  // Clear out the userInfo
-      this.errorMessage = 'Rate limit exceeded. Please use a Personal Access Token for more requests.';
+      const rateLimitReset = error.headers.get('X-RateLimit-Reset');
+      if (rateLimitReset) {
+        const resetTime = new Date(parseInt(rateLimitReset) * 1000);
+        this.errorMessage = `Rate limit exceeded. Please wait until ${resetTime.toLocaleTimeString()} to make more requests or use a Personal Access Token for more requests.`;
+      } else {
+        this.errorMessage = 'Rate limit exceeded, but reset time is unavailable.';
+      }
     } else {
-      this.userInfo = null;  // Clear out the userInfo
       this.errorMessage = 'An unknown error occurred.';
     }
   }
+  
 }
