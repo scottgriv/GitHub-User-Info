@@ -36,13 +36,7 @@
       <ng-container *ngIf="userInfo.email; else naTemplate">
         <a href="mailto:{{userInfo.email}}" target="_blank">{{ userInfo.email }}</a>
       </ng-container>
-    </span></p>
-    <p><span class="field-title">Email:</span> <span class="field-value">
-      <ng-container *ngIf="userInfo.email; else naTemplate">
-        <a href="mailto:{{userInfo.email}}" target="_blank">{{ userInfo.email }}</a>
-      </ng-container>
-      <ng-template #naTemplate>N/A</ng-template>
-    </span></p>    
+    </span></p> 
     <p><span class="field-title">Website:</span> <span class="field-value">
       <ng-container *ngIf="userInfo.blog; else naTemplate">
         <a [href]="getCompleteUrl(userInfo.blog)" target="_blank">{{ userInfo.blog }}</a>
